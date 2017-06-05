@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>Z-High Housing Rental</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/demo.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1>Z-High <i class="fa fa-home" aria-hidden="true"></i> - Find Your Way Home</h1>
+  <hr>
+
+  <!-- forms -->
+  <div class="container">
+    <div class="row">
+      <!-- Sign up user form -->
+      <div id="UserForm" class="mainbox col-md-6">
+         <h3>User Sign Up</h3>
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <form id="form" class="form-horizontal" role="form" action="/registerUser" method="POST">
+              <div class="form-group">
+                <label for="CustFname" class="col-md-3 control-label">First Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustFname" class="form-control" name="CustFname"
+                       placeholder="Your first name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustLname" class="col-md-3 control-label">Last Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustLname" class="form-control" name="CustLname"
+                       placeholder="Your last name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustDOB" class="col-md-3 control-label">Date of Birth</label>
+                <div class="col-md-9">
+                  <input type="date" id="CustDOB" class="form-control" name="CustDOB">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustEmail" class="col-md-3 control-label">Email</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustEmail" class="form-control" name="CustEmail" placeholder="Your Email Address">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustPhone" class="col-md-3 control-label">Phone</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustPhone" class="form-control" name="CustPhone" placeholder="Your Phone Number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustAddress" class="col-md-3 control-label">Address</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustAddress" class="form-control" name="CustAddress" placeholder="Your Address">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustCity" class="col-md-3 control-label">City</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustCity" class="form-control" name="CustCity" placeholder="Your City">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustState" class="col-md-3 control-label">State</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustState" class="form-control" name="CustState" placeholder="Your State">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustZip" class="col-md-3 control-label">Zip</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustZip" class="form-control" name="CustZip" placeholder="Your Zip Code">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CustPasswd" class="col-md-3 control-label">Password</label>
+                <div class="col-md-9">
+                  <input type="text" id="CustPasswd" class="form-control" name="CustPasswd" placeholder="Your Password">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-offset-1 col-md-12">
+                  <button id="btn-UserSubmit" type="submit" class="btn btn-info">
+                    <i class="icon-hand-right"></i>Sgin up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button id="btn-showUsers" type="submit" class="btn btn-info"><i class="icon-hand-right">
+        </i>Show Top 1000 Users</button>
+      </div>
+
+      <!-- Sign Lease form -->
+      <div id="LeaseForm" class="mainbox col-md-6">
+         <h3>Sign A Lease</h3>
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <form id="form" class="form-horizontal" role="form" action="/signLease" method="POST">
+              
+              <div class="form-group">
+                <label for="UserEmail" class="col-md-3 control-label">User Email</label>
+                <div class="col-md-9">
+                  <input type="text" id="UserEmail" class="form-control" name="UserEmail"
+                       placeholder="The registered email address">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="UserPasswd" class="col-md-3 control-label">User Password</label>
+                <div class="col-md-9">
+                  <input type="text" id="UserPasswd" class="form-control" name="UserPasswd"
+                       placeholder="User's Password">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="Address" class="col-md-3 control-label">Address</label>
+                <div class="col-md-9">
+                    <input type="text" id="Address" class="form-control" name="Address" placeholder="ex.1010 1st Ave NE">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="UnitName" class="col-md-3 control-label">Unit</label>
+                <div class="col-md-9">
+                    <input type="text" id="UnitName" class="form-control" name="UnitName" placeholder="ex.Avanti">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="BuildingName" class="col-md-3 control-label">Building</label>
+                  <div class="col-md-9">
+                  <input type="text" id="BuildingName" class="form-control" name="BuildingName" placeholder="ex.BORGATA APARTMENT">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="LocationName" class="col-md-3 control-label">Location</label>
+                <div class="col-md-9">
+                    <input type="text" id="LocationName" class="form-control" name="LocationName" placeholder="ex.Bellevue Downtown">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="CityName" class="col-md-3 control-label">City</label>
+                <div class="col-md-9">
+                    <input type="text" id="CityName" class="form-control" name="CityName" placeholder="ex.Bellevue">
+                </div>
+              </div>
+                  
+              <div class="form-group">
+                <label for="BeginDate" class="col-md-3 control-label">Begin Date</label>
+                <div class="col-md-9">
+                  <input type="date" id="BeginDate" class="form-control" name="BeginDate">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="duration" class="col-md-3 control-label">Lease Term</label>
+                <div class="col-md-9">
+                  <select name="duration">
+                    <option name="halfYear">6 months</option>
+                    <option name="oneYear">12 months</option>
+                    <option name="twoYear">24 months</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="SignDate" class="col-md-3 control-label">Sign Date</label>
+                <div class="col-md-9">
+                  <input type="date" id="SignDate" class="form-control" name="SignDate">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-offset-1 col-md-12">
+                  <button id="btn-EventSubmit" type="submit" class="btn btn-info">
+                    <i class="icon-hand-right"></i>Signature</button>
+                </div>
+              </div>     
+            </form>
+          </div>
+        </div>
+        <button id="btn-showLeases" type="submit" class="btn btn-info"><i class="icon-hand-right">
+        </i>Show Top 1000 Leases</button>
+      </div>
+    </div><!-- end row-->
+  </div><!-- end container -->
+  
+  <!-- results table -->
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr id="tablehead">
+
+        </tr>
+      </thead>
+      <tbody id="resultsTable">
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="users.js"></script>
+<script type="text/javascript" src="lease.js"></script>
+</body>
+</html>
