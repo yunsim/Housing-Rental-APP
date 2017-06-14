@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Update Customer Info</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/demo.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1><i class="fa fa-user-circle-o" aria-hidden="true"></i> User Update</h1>
+	<hr>
+	<div id="CustForm" style="margin-top:30px"
+		 class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<form id="form" class="form-horizontal" role="form" action="/UserUpdate" method="POST">
+					<input id="CustomerID" type="hidden" class="form-control" name="CustomerID" value="">
+					
+					<div class="form-group">
+						<label for="FirstName" class="col-md-3 control-label">First Name</label>
+						<div class="col-md-9">
+							<input id="FirstName" type="text" class="form-control" name="FirstName"
+								   placeholder="Your first name">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="LastName" class="col-md-3 control-label">Last Name</label>
+						<div class="col-md-9">
+							<input id="LastName" type="text" class="form-control" name="LastName"
+								   placeholder="Your last name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="DateOfBirth" class="col-md-3 control-label">Date of Birth</label>
+						<div class="col-md-9">
+							<input id="DateOfBirth" type="date" class="form-control"
+								   name="DateOfBirth">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustEmail" class="col-md-3 control-label">Email</label>
+						<div class="col-md-9">
+							<input id="CustEmail" type="text" class="form-control"
+								   name="CustEmail" placeholder="Your Email Address">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustPhone" class="col-md-3 control-label">Phone</label>
+						<div class="col-md-9">
+							<input id="CustPhone" type="text" class="form-control"
+								   name="CustPhone" placeholder="Your Phone Number">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustAddress" class="col-md-3 control-label">Address</label>
+						<div class="col-md-9">
+							<input id="CustAddress" type="text" class="form-control"
+								   name="CustAddress" placeholder="Your Address">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustCity" class="col-md-3 control-label">City</label>
+						<div class="col-md-9">
+							<input id="CustCity" type="text" class="form-control"
+								   name="CustCity" placeholder="Your City">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustState" class="col-md-3 control-label">State</label>
+						<div class="col-md-9">
+							<input id="CustState" type="text" class="form-control"
+								   name="CustState" placeholder="Your State">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="CustZipe" class="col-md-3 control-label">Zip</label>
+						<div class="col-md-9">
+							<input id="CustZip" type="text" class="form-control"
+								   name="CustZip" placeholder="Your Zip Code">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="col-md-3 control-label">Password</label>
+						<div class="col-md-9">
+							<input id="password" type="text" class="form-control"
+								   name="password" placeholder="Your Password">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-offset-1 col-md-12">
+							<button id="btn-UserUpdate" type="submit" class="btn btn-info">
+								<i class="icon-hand-right"></i>Update</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/editCustomer.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "info_445_house_rental",
+  "version": "1.0.0",
+  "description": "The application of House Rental Team for INFO 445 Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yunsi/Ran/Hengyu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mssql": "^4.0.4"
+  }
+}

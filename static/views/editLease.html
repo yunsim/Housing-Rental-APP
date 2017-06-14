@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Update Lease Info</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/demo.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+</head>
+<body>
+	<h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Lease Update</h1>
+	<hr>
+	<div id="LeaseForm" style="margin-top:30px"
+		 class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+		<div class="panel panel-info">
+			<div class="panel-body">
+				<form id="form" class="form-horizontal" role="form" action="/LeaseUpdate" method="POST">
+					<input id="LeaseID" type="hidden" class="form-control" name="LeaseID" value="">
+					
+					<div class="form-group">
+                		<label for="UserEmail" class="col-md-3 control-label">User Email</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="UserEmail" class="form-control" name="UserEmail"
+                       placeholder="The registered email address">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+               			<label for="UserPasswd" class="col-md-3 control-label">User Password</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="UserPasswd" class="form-control" name="UserPasswd"
+                       placeholder="User's Password">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+               			<label for="Address" class="col-md-3 control-label">Address</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="Address" class="form-control" name="Address" placeholder="ex.1010 1st Ave NE">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+                		<label for="UnitName" class="col-md-3 control-label">Unit</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="UnitName" class="form-control" name="UnitName" placeholder="ex.Avanti">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+                		<label for="BuildingName" class="col-md-3 control-label">Building</label>
+                			<div class="col-md-9">
+                  		<input type="text" id="BuildingName" class="form-control" name="BuildingName" placeholder="ex.BORGATA APARTMENT">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+               			<label for="LocationName" class="col-md-3 control-label">Location</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="LocationName" class="form-control" name="LocationName" placeholder="ex.Bellevue Downtown">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+                		<label for="CityName" class="col-md-3 control-label">City</label>
+                		<div class="col-md-9">
+                  			<input type="text" id="CityName" class="form-control" name="CityName" placeholder="ex.Bellevue">
+                		</div>
+              		</div>
+              		
+              		<div class="form-group">
+                		<label for="BeginDate" class="col-md-3 control-label">Begin Date</label>
+                		<div class="col-md-9">
+                  			<input type="date" id="BeginDate" class="form-control" name="BeginDate">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+                		<label for="duration" class="col-md-3 control-label">Lease Term</label>
+                		<div class="col-md-9">
+                  			<select name="duration">
+                    			<option name="halfYear">6 months</option>
+                    			<option name="oneYear">12 months</option>
+                    			<option name="twoYear">24 months</option>
+                  			</select>
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+                		<label for="SignDate" class="col-md-3 control-label">Sign Date</label>
+                		<div class="col-md-9">
+                  			<input type="date" id="SignDate" class="form-control" name="SignDate">
+                		</div>
+              		</div>
+
+              		<div class="form-group">
+						<div class="col-md-offset-1 col-md-12">
+							<button id="btn-LeaseUpdate" type="submit" class="btn btn-info">
+								<i class="icon-hand-right"></i>Update</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/editLease.js"></script>
+</body>
+</html>
